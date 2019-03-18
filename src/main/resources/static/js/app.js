@@ -1,21 +1,27 @@
 
 
+$("#connect").on("click", cine);
 
+var cine = (function () {
 
-var cine=(function(){
-
-    function getAllCinemas(){
-        var cinemas=apimock.getByNamesCinemas;
+    function getAllCinemas() {
+        alert("miremos como llega solito"+apimock.getByNamesCinemas());
+        var cinemas = apimock.getByNamesCinemas();
+        alert("mremos los cinemas: " + cinemas);
         
-
-
-}
+ 
     
 
-    return {
-    getAllCinemas:getAllCinemas
+        $("#listacinemas").append("<tr><td>" + cinemas + "</td></tr>");
 
-};
+
+    }
+
+
+    return {
+        getAllCinemas: getAllCinemas
+
+    };
 })();
 
 
