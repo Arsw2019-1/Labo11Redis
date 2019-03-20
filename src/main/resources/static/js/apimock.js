@@ -22,7 +22,7 @@ var mockdata = [];
                  },
                 getByNamesCinemas:function(){
 
-                alert("lalala cinemas"+names);
+ 
                         return names;
 
                 }

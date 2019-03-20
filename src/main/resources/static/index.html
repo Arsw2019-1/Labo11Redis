@@ -88,12 +88,12 @@
                 <div class="single-menu">
 
                     <form class="form-inline" onkeypress="return anular(event)">
-                        <div class="form-group">
+                        <div class="form-group" align="center">
                             <label >Cinemas</label>
                             <button id="connect" class="btn btn-default" type="button" onclick="cine.getAllCinemas()">Buscar</button>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" >
                             <label >Lista de Cinemas</label>
                             <div id="listacinemas" ></div>
                             
@@ -109,19 +109,25 @@
         <section class="video-sec-area pb-100 pt-40" id="about">
             <div class="container">
                 <div class="row justify-content-start align-items-center">
-                    <div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
-                        <div class="overlay overlay-bg"></div>
-                        <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" src="img/play-icon.png" alt=""></a>
-                    </div>						
+					
                     <div class="col-lg-6 video-left">
-                        <h6>Informacion de la pelicula.</h6>
+                        <h6>Informacion de peliculas por cinema.</h6>
+                        <h7>Seleccione Cinema a consultar.</h7>
+                        <form id="form2" name="form2" method="post" onclick="">
+                            <select id="cine" name="cine">
+                                
+                                
+                            </select>
+                        </form>
+                        <button id="connect" class="btn btn-default" type="button" onclick="cine.selectCinema()">Buscar</button>
+                        
                         <h1>Las sillas disponibles son <br>
                             Coffee Making Live</h1>
                         <p><span>We are here to listen from you deliver exellence</span></p>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
                         </p>
-                        <img class="img-fluid" src="img/signature.png" alt="">
+
                     </div>
                 </div>
             </div>	
