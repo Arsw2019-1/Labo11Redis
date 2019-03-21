@@ -2,7 +2,7 @@ $("#connect").on("click", cine);
 
 var persons = [];
 var cinemas = "";
-
+var sillasNum=0;
 var tabla = "";
 var cine = (function () {
 
@@ -29,12 +29,7 @@ var cine = (function () {
                 var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td></tr>";
                 $("table tbody").append(markup);
             });
-
-
         });
-
-
-
     }
 
     function selec() {
@@ -46,8 +41,34 @@ var cine = (function () {
         texto += "nValor de la opcion escogida: " + valor;
         var textoEscogido = document.form2.form2.options[indice].text;
         myFunction(apimock.getByNamesCine(valor));
+        cine.selecs()
     }
-
+    function selecs() {
+        $(document.datCine).ready(function () {
+            $('input[type="checkbox"]').change(function () {
+                if ($(this).is(':checked')) {
+                    $('input[type="checkbox"]').not(this).prop('checked', false);
+                    var tr = $(this).closest('tr');
+                    var funcion = $(tr).find('td:nth-child(2)').text();
+                    var canntidadSillas = $(tr).find('td:nth-child(3)').text();
+                    var fecha = $(tr).find('td:nth-child(4)').text();
+                    console.log('funcion: ' + funcion + ' - cantidad Sillas: ' + canntidadSillas + ' fecha: ' + fecha );
+                }
+            })
+        })
+        
+        
+        
+    }
+    
+    function mostrarSillas(){
+        
+        
+        
+        
+        
+    }
+    
     function getFullName() {
         var fullname = "";
         for (var x = 0; x < persons.length; x++) {
@@ -55,32 +76,28 @@ var cine = (function () {
             for (var i = 0; i < t.length; i++)
             {
                 fullname += [t[i].movie.name, t[i].seats.length * 12, t[i].date].join(" ");
-
-
                 $(document).ready(function () {
-                    
-                        var name = t[i].movie.name;
-                        var puestos = t[i].seats.length * 12;
-                        var fecha=t[i].date;
-                        var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + puestos + "</td><td>"+fecha + "</td></tr>";
-                        $("table tbody").append(markup);
+                    var name = t[i].movie.name;
+                    sillasNum=t[i].seats;
+                    var puestos = t[i].seats.length * 12;
+                    var fecha = t[i].date;
+                    var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + puestos + "</td><td>" + fecha + "</td></tr>";
+                    $("table tbody").append(markup);
                 });
-
             }
         }
-
         return fullname;
     }
-
     function myFunction(ter) {
         persons[0] = ter;
         document.getElementById("infoCinema").innerHTML = persons.map(getFullName);
     }
-
     return {
         getAllCinemas: getAllCinemas,
         selectCinema: selectCinema,
         selec: selec,
-        llenadotabla: llenadotabla
+        selecs: selecs,
+        llenadotabla: llenadotabla,
+        mostrarSillas:mostrarSillas
     };
 })();
