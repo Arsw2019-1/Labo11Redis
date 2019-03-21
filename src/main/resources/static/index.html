@@ -32,12 +32,12 @@
         <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet"
               href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />                        
-    <script type="text/javascript">
-     function anular(e) {
-          tecla = (document.all) ? e.keyCode : e.which;
-          return (tecla != 13);
-     }
-    </script>
+        <script type="text/javascript">
+            function anular(e) {
+                tecla = (document.all) ? e.keyCode : e.which;
+                return (tecla != 13);
+            }
+        </script>
     </head>
     <body>
 
@@ -96,8 +96,8 @@
                         <div class="form-group" >
                             <label >Lista de Cinemas</label>
                             <div id="listacinemas" ></div>
-                            
-                            
+
+
                         </div>                         
                     </form>
                 </div>
@@ -109,18 +109,22 @@
         <section class="video-sec-area pb-100 pt-40" id="about">
             <div class="container">
                 <div class="row justify-content-start align-items-center">
-					
+
                     <div class="col-lg-6 video-left">
                         <h6>Informacion de peliculas por cinema.</h6>
                         <h7>Seleccione Cinema a consultar.</h7>
                         <form id="form2" name="form2" method="post" onclick="">
-                            <select id="cine" name="cine">
-                                
-                                
+                            <select id="cine" name="form2">
+
+
                             </select>
+                            <div   id="infoCinema" style="text-align:center" >
+                                <!-- Respuesta -->
+                            </div>
                         </form>
                         <button id="connect" class="btn btn-default" type="button" onclick="cine.selectCinema()">Buscar</button>
-                        
+                        <button id="connect2" class="btn btn-default" type="button" onclick="cine.selec()">probar</button>
+
                         <h1>Las sillas disponibles son <br>
                             Coffee Making Live</h1>
                         <p><span>We are here to listen from you deliver exellence</span></p>
@@ -379,8 +383,8 @@
                 </div>
         </footer>	
         <!-- End footer Area C:\Users\2098325\Documents\LABORATORIO6\src\main\resources\static\js\vendor\jquery-2.2.4.min.js-->	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
         <script src="/js/vendor/jquery-2.2.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="js/vendor/bootstrap.min.js"></script>			
@@ -400,7 +404,7 @@
         <script src="js/main.js"></script>	
         <script src="js/app.js"></script>
         <script src="js/apimock.js"></script>
-        
+
     </body>
 </html>
 
