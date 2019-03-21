@@ -27,9 +27,8 @@ var elec = "";
                     var resp="";
                     for(var i = 0; i < mockdata.length; i++){
                         if(mockdata[i].name==name){
-                            alert("urra"+mockdata[i].name);
                             resp=mockdata[i];
-                            alert(resp.name);
+                            
                             break;
                             
                             
