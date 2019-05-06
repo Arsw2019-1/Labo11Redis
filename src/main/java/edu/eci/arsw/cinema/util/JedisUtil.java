@@ -5,9 +5,6 @@ import redis.clients.jedis.JedisPoolConfig;
 
 import java.util.ResourceBundle;
 
-/**
- * Created by vino on 16/8/20.
- */
 public class JedisUtil {
     private  static JedisPool pool;
 
