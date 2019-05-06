@@ -18,6 +18,8 @@ import java.util.Set;
  */
 public interface CinemaPersitence {
     
+
+    
     /**
      * 
      * @param row the row of the seat
@@ -37,7 +39,7 @@ public interface CinemaPersitence {
      * @param date date
      * @return the list of the functions of the cinema in the given date
      */
-    public List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date);
+    public List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date)throws CinemaPersistenceException, CinemaException;
     
     /**
      * 

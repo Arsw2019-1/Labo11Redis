@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 import org.springframework.stereotype.Service;
 
 /**
@@ -74,6 +75,10 @@ public class CinemaFunction {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public void setSeats(List<List<AtomicBoolean>> obj) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
